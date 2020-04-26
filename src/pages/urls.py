@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import IndexView, DashboardView, AboutView
+from .views import IndexView, DashboardView, AboutView,PostDetailView
 
 app_name = 'pages'
 urlpatterns = [
     path(
-        'home/',
+        '',
         IndexView.as_view(),
         name='home-view'
     ),
@@ -17,5 +17,11 @@ urlpatterns = [
         'about/',
         AboutView.as_view(),
         name='about-view'
+    ),
+    path(
+        '<slug:slug>/',
+        PostDetailView.as_view(),
+        name='post-details'
+
     )
 ]

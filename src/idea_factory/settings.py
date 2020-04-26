@@ -15,7 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# AUTH_USER_MODEL = 'accounts.User'
+
 
 
 # Application definition
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dev_social_network.urls'
+ROOT_URLCONF = 'idea_factory.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
 
 AUTH_USER_MODEL = 'accounts.User'
 
-WSGI_APPLICATION = 'dev_social_network.wsgi.application'
+WSGI_APPLICATION = 'idea_factory.wsgi.application'
 
 
 # Database

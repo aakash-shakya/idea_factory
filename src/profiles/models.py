@@ -10,7 +10,7 @@ User  = get_user_model()
 
 GENDER_CHOICES = [
   ('Male', 'Male'),
-  ('Female', 'Female')
+  ('Female', 'Female'),
 ]
 
 STATUS_CHOICES = [
@@ -66,7 +66,7 @@ class Profile(models.Model):
   name = models.CharField(max_length=100)
   age = models.IntegerField()
   gender = models.CharField(
-    max_length=5,
+    max_length=10,
     default=1,
     choices=GENDER_CHOICES
   )

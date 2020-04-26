@@ -9,6 +9,7 @@
   <hr>
   <form action="" method="POST"> {% csrf_token %}
     {{form|crispy}}
+    {% csrf_token %}
     <button class="btn btn-lg btn-primary" type="submit">Login</button>
   </form>
   <br>

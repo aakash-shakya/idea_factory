@@ -6,21 +6,29 @@ User = get_user_model()
 
 
 class RegisterForm(forms.ModelForm):
+  # first_name = forms.CharField()
+  # last_name = forms.CharField()
+
   email = forms.EmailField(
     widget=forms.EmailInput(
       attrs={
         'class': 'form-control form-control-lg',
-        'placeholder': 'Enter Email Id'
+        'placeholder': 'Enter Email Id',
+        'autocomplete':'off',
       }
     )
   )
+
+  # country_code = forms.CharField()
+  # contact = forms.CharField()
 
   password1 = forms.CharField(
     label='Password',
     widget=forms.PasswordInput(
       attrs={
         'class': 'form-control form-control-lg',
-        'placeholder': 'Enter Password'
+        'placeholder': 'Enter Password',
+        'autocomplete':'off',
       }
     )
   )
@@ -30,7 +38,8 @@ class RegisterForm(forms.ModelForm):
     widget=forms.PasswordInput(
       attrs={
         'class': 'form-control form-control-lg',
-        'placeholder': 'Confirm Password'
+        'placeholder': 'Confirm Password',
+        'autocomplete':'off',
       }
     )
   )
@@ -68,7 +77,8 @@ class LoginForm(forms.Form):
     widget=forms.TextInput(
       attrs={
         'class': 'form-control form-control-lg',
-        'placeholder': 'Enter Email'
+        'placeholder': 'Enter Email',
+        'autocomplete':'off',
       }
     )
   )
@@ -76,7 +86,8 @@ class LoginForm(forms.Form):
     widget=forms.PasswordInput(
       attrs={
         'class': 'form-control form-control-lg',
-        'placeholder': 'Enter Password'
+        'placeholder': 'Enter Password',
+        'autocomplete':'off',
       }
     )
   )

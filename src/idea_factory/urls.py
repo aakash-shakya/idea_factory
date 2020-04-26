@@ -4,31 +4,31 @@ from django.urls import path, include
 
 urlpatterns = [
     path(
-        'dev/',
+        '',
         include('pages.urls', namespace='pages')
     ),
     path(
-        'dev/accounts/',
+        'accounts/',
         include('accounts.urls', namespace='accounts')
     ),
     path(
-        'dev/posts/',
+        'idea/posts/',
         include('posts.urls', namespace='posts')
     ),
     path(
-        'dev/posts/',
+        'idea/posts/',
         include('likes.urls', namespace='likes')
     ),
     path(
-        'dev/posts/',
+        'idea/posts/',
         include('unlikes.urls', namespace='unlikes')
     ),
     path(
-        'dev/posts/',
+        'idea/posts/',
         include('comments.urls', namespace='comments')
     ),
     path(
-        'dev/profiles/',
+        'idea/profiles/',
         include('profiles.urls', namespace='profiles')
     ),
     path('admin/', admin.site.urls),
